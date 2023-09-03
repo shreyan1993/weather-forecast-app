@@ -5,11 +5,9 @@ import { GlobalProps } from 'typings/GlobalTypings';
 import { useLocationSearch } from 'utils/hooks/useLocationSearch';
 import { LocationContextTypes } from './locationContext.types';
 
-
-
 export const LocationContext = createContext<LocationContextTypes>({
 	cityName: '',
-	setCityName: ()=>{},
+	setCityName: () => {},
 	location: undefined,
 	setLocation: () => {},
 	searchedLocationData: [],
@@ -25,7 +23,16 @@ export const LocationProvider: React.FC<GlobalProps> = ({ children }) => {
 	const { currentWeatherData, forecastWeatherData, status } = useWeatherData(location?.lat, location?.lon);
 	return (
 		<LocationContext.Provider
-			value={{ cityName, setCityName, location, setLocation, searchedLocationData, currentWeatherData, forecastWeatherData, status }}
+			value={{
+				cityName,
+				setCityName,
+				location,
+				setLocation,
+				searchedLocationData,
+				currentWeatherData,
+				forecastWeatherData,
+				status,
+			}}
 		>
 			{children}
 		</LocationContext.Provider>

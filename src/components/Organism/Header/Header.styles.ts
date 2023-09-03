@@ -21,8 +21,8 @@ export const StyledHeader = styled.header`
 		font-size: 16px;
 		font-weight: bold;
 		@media (min-width: 640px) {
-		padding: 0 0 0 60px;
-	}
+			padding: 0 0 0 60px;
+		}
 
 		img {
 			margin-right: 7px;

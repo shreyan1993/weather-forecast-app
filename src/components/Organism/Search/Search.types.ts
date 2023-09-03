@@ -4,8 +4,8 @@ export interface LocationData {
 	lat: number;
 	lon: number;
 	country: string;
-	state: string; 
-  }
+	state: string;
+}
 
 export interface SearchProps {
 	fieldLabel?: string;

@@ -22,8 +22,6 @@ export const StyledDiv = styled.div<{ forecast?: boolean }>`
 	}
 `;
 
-export const StyledWeatherDetailsWrapper = styled.div``;
-
 export const StyledWeatherDescription = styled.p<{ forecast?: boolean }>`
 	@media (min-width: 640px) {
 		text-align: center;

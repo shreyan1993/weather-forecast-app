@@ -73,7 +73,7 @@ export const Search: React.FC<SearchProps> = ({ fieldLabel }) => {
 				onKeyDown={handleKeyDown}
 				ref={inputRef}
 			/>
-			{isDropdownOpen && searchedLocationData.length !==0 && (
+			{isDropdownOpen && searchedLocationData.length !== 0 && (
 				<>
 					<Dropdown options={searchedLocationData} data-testid="dropdown" onSelect={handleDropdownSelect} />
 				</>

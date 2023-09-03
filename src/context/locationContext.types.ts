@@ -3,7 +3,7 @@ import { WeatherResponse } from '../components/Molecules/WeatherInfo/WeatherInfo
 
 export interface LocationContextTypes {
 	cityName: string;
-	setCityName:(cityName: string) => void;
+	setCityName: (cityName: string) => void;
 	location: LocationData | undefined;
 	setLocation: (location: LocationData) => void;
 	searchedLocationData: LocationData[];

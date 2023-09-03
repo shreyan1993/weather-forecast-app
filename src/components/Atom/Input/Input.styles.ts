@@ -9,10 +9,10 @@ export const StyledInput = styled.input`
 	border-radius: 30px;
 	padding: 10px;
 	color: #e91e63;
-  height: 32px;
+	height: 32px;
 	width: 100%;
-  font-size: 18px;
-  display: block;
-  margin: 0 auto;
+	font-size: 18px;
+	display: block;
+	margin: 0 auto;
 	position: relative;
 `;

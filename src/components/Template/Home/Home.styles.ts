@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import GenericBackground from 'assets/GenericWeather.jpg'
+import GenericBackground from 'assets/GenericWeather.jpg';
 
 export const StyledWeatherWrapper = styled.div`
 	position: relative;
@@ -7,8 +7,8 @@ export const StyledWeatherWrapper = styled.div`
 `;
 
 export const StyledMain = styled.main`
-		background-image: url(${GenericBackground}); 
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: cover;
-		`;
+	background-image: url(${GenericBackground});
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+`;

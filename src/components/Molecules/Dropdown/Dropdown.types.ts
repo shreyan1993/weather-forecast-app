@@ -1,7 +1,6 @@
-import { LocationData } from "../../Organism/Search/Search.types";
-
+import { LocationData } from '../../Organism/Search/Search.types';
 
 export interface DropdownProps {
 	options: LocationData[];
-	onSelect: (option:LocationData) => void;
+	onSelect: (option: LocationData) => void;
 }

@@ -7,9 +7,9 @@ import { StyledForecastWrapper } from './WeatherTile.styles';
 
 export const WeatherTile: React.FC = () => {
 	const { location, currentWeatherData, forecastWeatherData, status } = useLocationData();
-	console.log(forecastWeatherData)
+	console.log(forecastWeatherData);
 
-	const getNext5DaysFromTimestamps = (timestamps:any): WeatherResponse[] => {
+	const getNext5DaysFromTimestamps = (timestamps: any): WeatherResponse[] => {
 		const currentDate = new Date().getDay();
 		const next5Days = [];
 

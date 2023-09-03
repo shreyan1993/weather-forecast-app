@@ -1,7 +1,6 @@
 import { themeStyles } from 'App.theme';
 import { createGlobalStyle } from 'styled-components';
 
-
 const GlobalStyle = createGlobalStyle`
   ${themeStyles}
 

@@ -5,8 +5,6 @@ import { WeatherTile } from '../../Organism/WeatherTile';
 import { StyledMain, StyledWeatherWrapper } from './Home.styles';
 
 const Home: React.FC = () => {
-
-
 	return (
 		<LocationProvider>
 			<StyledMain>

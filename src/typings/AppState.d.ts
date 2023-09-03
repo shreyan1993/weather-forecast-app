@@ -1,3 +1,3 @@
 interface AppState {
-    persistenceId?: string,
+	persistenceId?: string;
 }
