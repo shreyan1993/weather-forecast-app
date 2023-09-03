@@ -10,7 +10,6 @@ const Home: React.FC = () => {
 	return (
 		<LocationProvider>
 			<StyledMain>
-				{/* <HeadingH1>Weather Dashboard for Coates Group</HeadingH1> */}
 				<StyledWeatherWrapper className="weather-app-wrapper">
 					<Search />
 				</StyledWeatherWrapper>
