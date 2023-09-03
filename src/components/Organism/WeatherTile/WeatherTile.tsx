@@ -7,13 +7,14 @@ import { StyledForecastWrapper } from './WeatherTile.styles';
 
 export const WeatherTile: React.FC = () => {
 	const { location, currentWeatherData, forecastWeatherData, status } = useLocationData();
+	console.log(forecastWeatherData)
 
-	const getNext5DaysFromTimestamps = (timestamps: WeatherResponse[]): WeatherResponse[] => {
+	const getNext5DaysFromTimestamps = (timestamps:any): WeatherResponse[] => {
 		const currentDate = new Date().getDay();
 		const next5Days = [];
 
 		for (let i = 0; i < timestamps.length; i++) {
-			const timestamp = timestamps[i].dt * 1000; // Convert to milliseconds
+			const timestamp = timestamps[i].dt * 1000;
 			const date = new Date(timestamp).getDay();
 			if (currentDate != date && i % 8 === 0) {
 				next5Days.push(timestamps[i]);
@@ -30,11 +31,11 @@ export const WeatherTile: React.FC = () => {
 				<>
 					<div>
 						<HeadingH1>{location?.name}</HeadingH1>
-						<WeatherInfo data={currentWeatherData} forecast={false} />
+						<WeatherInfo data={currentWeatherData} />
 					</div>
 					<StyledForecastWrapper>
 						{getNext5DaysFromTimestamps(forecastWeatherData.list).map(item => (
-							<WeatherInfo data={item} forecast={true} />
+							<WeatherInfo data={item} forecast />
 						))}
 					</StyledForecastWrapper>
 				</>

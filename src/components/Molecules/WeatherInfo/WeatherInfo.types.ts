@@ -1,6 +1,6 @@
 export interface WeatherResponse {
 	dt: number;
-    list:[],
+	list?: [];
 	main: {
 		temp: number;
 		feels_like: number;

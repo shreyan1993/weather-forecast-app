@@ -6,14 +6,11 @@ import { Input } from '../../Atom/Input';
 import { StyledDiv } from './Search.styles';
 
 export const Search: React.FC<SearchProps> = ({ fieldLabel }) => {
-	const [searchedLocationData, setSearchedLocationData] = useState([]);
-	const { setLocation } = useLocationData();
-	const [cityName, setCityName] = useState('');
+	const { cityName, setCityName, searchedLocationData, setLocation } = useLocationData();
 	const [selectedOptionIndex, setSelectedOptionIndex] = useState(-1);
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 	const inputRef = useRef<HTMLInputElement>(null);
 
-	// Add event listener to window for detecting clicks outside the dropdown
 	useEffect(() => {
 		const handleClickOutside = (e: MouseEvent): void => {
 			closeDropdown();
@@ -25,22 +22,6 @@ export const Search: React.FC<SearchProps> = ({ fieldLabel }) => {
 			window.removeEventListener('click', handleClickOutside);
 		};
 	}, []);
-
-	// call the location API
-	useEffect(() => {
-		const timer = setTimeout(() => {
-			if (cityName) {
-				fetch(
-					`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=13ce01a858d7aa682de82049bf7803f7`,
-				)
-					.then(response => response.json())
-					// store in state
-					.then(data => setSearchedLocationData(data));
-			}
-		}, 200);
-
-		return () => clearTimeout(timer);
-	}, [cityName]);
 
 	const closeDropdown = (): void => {
 		setIsDropdownOpen(false);
@@ -61,18 +42,14 @@ export const Search: React.FC<SearchProps> = ({ fieldLabel }) => {
 
 	const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>): void => {
 		if (e.key === 'ArrowDown') {
-			// Move down the options list
 			setSelectedOptionIndex(prevIndex =>
 				prevIndex < searchedLocationData.length - 1 ? prevIndex + 1 : prevIndex,
 			);
 		} else if (e.key === 'ArrowUp') {
-			// Move up the options list
 			setSelectedOptionIndex(prevIndex => (prevIndex > 0 ? prevIndex - 1 : prevIndex));
 		} else if (e.key === 'Enter' && selectedOptionIndex !== -1) {
-			// Select the option on Enter
 			handleDropdownSelect(searchedLocationData[selectedOptionIndex]);
 		} else if (e.key === 'Escape') {
-			// Close the dropdown on Escape
 			closeDropdown();
 		}
 	};
@@ -96,9 +73,9 @@ export const Search: React.FC<SearchProps> = ({ fieldLabel }) => {
 				onKeyDown={handleKeyDown}
 				ref={inputRef}
 			/>
-			{isDropdownOpen && searchedLocationData.length !== 0 && (
+			{isDropdownOpen && searchedLocationData.length !==0 && (
 				<>
-					<Dropdown options={searchedLocationData} onSelect={handleDropdownSelect} />
+					<Dropdown options={searchedLocationData} data-testid="dropdown" onSelect={handleDropdownSelect} />
 				</>
 			)}
 		</StyledDiv>

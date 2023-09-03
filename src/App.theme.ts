@@ -39,6 +39,7 @@ export const themeStyles = css`
 		font-family: 'Rubik', sans-serif;
 		font-size: 18px;
 		color: white;
+		box-sizing: border-box;
 
 		.route {
 			display: flex;

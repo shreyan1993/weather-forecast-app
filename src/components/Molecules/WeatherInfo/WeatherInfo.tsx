@@ -12,8 +12,8 @@ import {
 export const WeatherInfo: React.FC<WeatherDetails> = ({ data, forecast }) => {
 	const formatDayOfWeek = (timestamp: number): string => {
 		const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-		const date = new Date(timestamp * 1000); // Convert timestamp to milliseconds
-		const dayOfWeek = daysOfWeek[date.getDay()]; // Get the day of the week
+		const date = new Date(timestamp * 1000);
+		const dayOfWeek = daysOfWeek[date.getDay()]; 
 		return dayOfWeek;
 	};
 	return (

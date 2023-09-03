@@ -1,6 +1,6 @@
 export interface InputProps {
     fieldLabel?: string
-    type: "text" | "radio"
+    type: string
     id: string
     name: string
     placeholder: string
