@@ -10,8 +10,8 @@ export const breakpoints = {
 
 const theme = {
 	colours: {
-		primary: '#61DBFB',
-		secondary: '#32323C',
+		primary: '#61dbfb',
+		secondary: '#ec2c7e',
 	},
 	breakpoints,
 	mediaQueries: {
