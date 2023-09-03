@@ -77,6 +77,35 @@ To have the best experience with this framework and the tools in general, you ne
   
 - The autocomplete dropwdown caters for the basic keyboard controls and screen-reader accessibility requirement because why not.
 
+# Assumptions
+
+- The component structure is divided into Atom, Molecules and Oraganisms in increasing order of their complexity and reusabilty.
+Atoms are like basic elements that can be consumed by any components inside Molecule or Organisms structure. Organisms are the largest of all elements and mostly all the final UI is put together in these folders.
+
+- The data layer has been abstracted by the help of a context provider so that the components can only take care of interactions and states.
+
+- The custom `useLocation` context provided consumes the `useWeatherData` and `useLocationData` hooks which is provided to all components.
+
+- There is a lot of abstraction that can always happen and lot of components can be further split which are not done in the best interest of time. (Refactors can always happen)
+
+- The idea of global css and global typings are present to demonstrate the idea of also pulling out global types and styles to make the codebase further cleaner. However there are still remaining bits and pieces that can still be pulled out to a more global level.
+
+- Unit Test using RTL and Jest have been written for the majority of the code base to demo TDD principles.
+
+- React 18 has been used as the latest version as the create-react-app commands comes with the latest package.
+
+- Types of each component are present locally within each component folder , however some may also like having all the types defined under the `typings` folder. It is purely a matter of choice.
+
+- setTimeouts have been added as debouncers to certain api calls to optimise performance and not call the api successively as the user keeps typing.
+
+- There is `/404` route created which has link to the homepage which is added to demo the ability of routing within the app.
+
+- assets for all the images and icons are placed inside the assets folder in root.
+
+- Most of the Global css and variables are created under App.Theme.ts to demonstrate clear ability to also scope out css by keeping it clean.
+
+
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 📸  Desktop  📸
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
