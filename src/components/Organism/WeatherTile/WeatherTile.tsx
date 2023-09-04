@@ -3,11 +3,10 @@ import { useLocationData } from '../../../context/locationContext';
 import { WeatherResponse } from '../../Molecules/WeatherInfo/WeatherInfo.types';
 import { HeadingH1 } from '../../Atom/Heading';
 import { WeatherInfo } from '../../Molecules/WeatherInfo';
-import { StyledForecastWrapper } from './WeatherTile.styles';
+import { StyledForecastWrapper, StyledSpinner } from './WeatherTile.styles';
 
 export const WeatherTile: React.FC = () => {
 	const { location, currentWeatherData, forecastWeatherData, status } = useLocationData();
-	console.log(forecastWeatherData);
 
 	const getNext5DaysFromTimestamps = (timestamps: any): WeatherResponse[] => {
 		const currentDate = new Date().getDay();
@@ -26,7 +25,7 @@ export const WeatherTile: React.FC = () => {
 
 	return (
 		<div>
-			{status === 'loading' ? <div aria-label="Please wait while data loads loading" className="spinner" /> : ''}
+			{status === 'loading' ? <StyledSpinner aria-label="Please wait while data loads loading" className="spinner" /> : ''}
 			{currentWeatherData && forecastWeatherData && status === 'loaded' && (
 				<>
 					<div>

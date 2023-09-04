@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Loader from 'assets/loader-icon.gif';
 
 export const StyledForecastWrapper = styled.div`
 	@media (min-width: 640px) {
@@ -17,4 +18,16 @@ export const StyledForecastWrapper = styled.div`
 	background-color: rgb(228 228 228 / 45%);
 	border-radius: 11px;
 	padding: 20px;
+`;
+
+export const StyledSpinner = styled.div`
+	height: 48px;
+	transform: translate(0%, 20%);
+	background-image: url(${Loader});
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	@media (min-width: 768px) {
+		transform: translate(0%, 50%);
+	}
 `;
