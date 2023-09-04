@@ -15,7 +15,7 @@ fetched location.
 
 **Prerequisites**
 
-- Have node and yarn installed on your machine for everything to work.
+- Have node v16.2 and yarn installed on your machine for everything to work.
 
 - Version no requirement come up in the console , incase the end system doesnt meet the versioning requirements
 
