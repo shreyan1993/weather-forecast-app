@@ -104,6 +104,22 @@ Atoms are like basic elements that can be consumed by any components inside Mole
 
 - Most of the Global css and variables are created under App.Theme.ts to demonstrate clear ability to also scope out css by keeping it clean.
 
+- Dropdown onKey up and down focus state is missing but it still works. 
+
+- Although the state of the app is fairly relatively small and thus no library like Mobx or Rxjs has not been used to manage state. A simple context provider and hooks do the job here in keep the component free from data calls and states associated to global level data needed by all components 
+
+
+# Improvements
+
+- In an ideal world, with coming iterations these are the few things the developer would have implemented.
+
+- Clean up and pull out css , or create mixins to it can be reused more often.
+
+- Add focus state to the dropdown to address accessibilty concern.
+
+- Cleanup the typings a bit more.
+
+- More code comments for further code explanation.
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
