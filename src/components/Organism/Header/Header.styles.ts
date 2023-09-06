@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
-	height: 60px;
+	height: 47px;
 	z-index: 1111;
 	display: flex;
 	position: sticky;
 	align-items: center;
 	justify-content: center;
+	background: rgb(211 203 220 / 57%);
 	@media (min-width: 640px) {
 		justify-content: start;
 		padding: 0 0 0 60px;
@@ -25,9 +26,11 @@ export const StyledHeader = styled.header`
 		}
 
 		img {
-			margin-right: 7px;
-			height: 50px;
-			width: 50px;
+			border-radius: 7px;
+    margin-right: 7px;
+    height: 37px;
+    width: 37px;
+}
 		}
 	}
 `;

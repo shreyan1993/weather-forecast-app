@@ -5,5 +5,10 @@ export const StyledFooter = styled.footer`
 	background-color: ${props => props.theme.colours.secondary};
 	color: white;
 	text-align: center;
-	height: 60px;
+	height: 47px;
+
+	p {
+		margin-top: 13px;
+		font-size: 16px;
+	}
 `;

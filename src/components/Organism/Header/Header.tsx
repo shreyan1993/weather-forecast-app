@@ -9,7 +9,7 @@ export const Header: React.FC = () => (
 	<StyledHeader>
 		<Link className="logo" to={Routes.Home.path}>
 			<img src={Logo} alt="React App" />
-			Weather Dashboard for Coates Group
+			Weather Dashboard
 		</Link>
 	</StyledHeader>
 );

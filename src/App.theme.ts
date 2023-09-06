@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-
+import GenericBackground from 'assets/GenericWeather.jpg';
 export const breakpoints = {
 	small: 640,
 	medium: 768, //ipad portrait
@@ -56,6 +56,13 @@ export const themeStyles = css`
 				flex: none;
 			}
 		}
+	}
+
+	body {
+		background-image: url(${GenericBackground});
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
 	}
 
 	/* Define other global styles here */
